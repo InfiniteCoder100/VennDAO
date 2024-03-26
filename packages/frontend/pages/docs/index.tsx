@@ -41,7 +41,8 @@ export default function Docs() {
                   href=""
                   target="_blank"
                 >
-                  View Contract on Base Sepolia
+                  View Contract on XLumio Testnet
+                
                 </Text.Anchor>
               </li>
               <li>
@@ -72,7 +73,7 @@ export default function Docs() {
                 <code>encryptedFields</code> must be encryped before being
                 passed in. Encryption must follow the steps seen in&nbsp;
                 <Text.Anchor
-                  href="https://github.com/dgca/VennDAO/blob/main/packages/frontend/utils/encrypt.ts"
+                  href="https://github.com/InfiniteCoder100/VennDAO/blob/master/packages/frontend/utils/encrypt.ts"
                   target="_blank"
                 >
                   this function

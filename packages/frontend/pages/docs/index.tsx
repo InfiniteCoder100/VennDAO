@@ -38,7 +38,7 @@ export default function Docs() {
             <ul className="list-disc list-outside pl-4">
               <li>
                 <Text.Anchor
-                  href="https://sepolia.basescan.org/address/0x294178884589af64db092eaf6986d499f7799bf8"
+                  href=""
                   target="_blank"
                 >
                   View Contract on Base Sepolia
@@ -46,7 +46,7 @@ export default function Docs() {
               </li>
               <li>
                 <Text.Anchor
-                  href="https://github.com/dgca/VennDAO/blob/main/packages/contracts/src/IVennDAOOrders.sol"
+                  href="https://github.com/InfiniteCoder100/VennDAO"
                   target="_blank"
                 >
                   View on GitHub

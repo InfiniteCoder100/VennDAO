@@ -1,0 +1,86 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: VennDAOOrders
+    network: base-sepolia
+    source:
+      address: "0xac10cd66e3ab8d4cde540029123742353ad421a7"
+      abi: VennDAOOrders
+      startBlock: 6746119
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - DaoFeeUpdated
+        - OrderFundsTransferred
+        - OrderPlaced
+        - OrderStatusUpdated
+        - OwnershipTransferred
+        - VendorRefundIssued
+        - VennDAOOrdersInitialized
+      abis:
+        - name: VennDAOOrders
+          file: VennDAOOrders/abis/VennDAOOrders.json
+      eventHandlers:
+        - event: OrderPlaced(indexed uint256,indexed uint256,indexed
+            address,uint256,address,uint256,uint256,uint8,string[],string)
+          handler: handleOrderPlaced
+        - event: OrderStatusUpdated(indexed uint256,indexed uint8)
+          handler: handleOrderStatusUpdated
+      file: VennDAOOrders/VennDAOOrders.wasm
+  - kind: ethereum
+    name: VennDAOProducts
+    network: base-sepolia
+    source:
+      address: "0x508a06bfa8a359392396b448dc93d11d3186ae11"
+      abi: VennDAOProducts
+      startBlock: 6746115
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - VennDAOProductsOwnershipTransferred
+        - ProductActiveStatusChanged
+        - ProductCreated
+      abis:
+        - name: VennDAOProducts
+          file: VennDAOProducts/abis/VennDAOProducts.json
+      eventHandlers:
+        - event: ProductCreated(indexed
+            uint256,bool,string,string,uint256,uint256,uint256,uint256,string[],string[])
+          handler: handleProductCreated
+      file: VennDAOProducts/VennDAOProducts.wasm
+  - kind: ethereum
+    name: VennDAOVendors
+    network: base-sepolia
+    source:
+      address: "0x291e234e6d21290ba4a17bd3f2fa2b63cdb7e711"
+      abi: VennDAOVendors
+      startBlock: 6776725
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - DelegateChanged
+        - DelegateVotesChanged
+        - EIP712DomainChanged
+        - MembershipFeeUpdated
+        - NewVendorMember
+        - OrdersAddressUpdated
+        - VennDAOVendorsOwnershipTransferred
+        - TokenBurned
+        - Transfer
+      abis:
+        - name: VennDAOVendors
+          file: VennDAOVendors/abis/VennDAOVendors.json
+      eventHandlers:
+        - event: NewVendorMember(indexed uint256,indexed address,string,string,string)
+          handler: handleNewVendorMember
+      file: VennDAOVendors/VennDAOVendors.wasm

@@ -38,10 +38,10 @@ export default function Docs() {
             <ul className="list-disc list-outside pl-4">
               <li>
                 <Text.Anchor
-                  href=""
+                  href="https://cardona-zkevm.polygonscan.com/tx/0x224a6d4544b6ec36a2760c4b6d88069d498af3cf13fa42870447b34a0bd53651"
                   target="_blank"
                 >
-                  View Contract on XLumio Testnet
+                  View Contract on Polygon zkEVM Cardona Testnet
                 
                 </Text.Anchor>
               </li>

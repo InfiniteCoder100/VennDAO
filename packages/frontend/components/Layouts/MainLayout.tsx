@@ -52,7 +52,7 @@ export function MainLayout({ children, includeFooter = true }: Props) {
         {children}
         {includeFooter && (
           <footer className="flex justify-center items-center py-6 gap-2">
-            <Text.Small>A project by Team HacknoMinds&nbsp;&nbsp;•</Text.Small>
+            <Text.Small>A project byThe Big Goose &nbsp;&nbsp;•</Text.Small>
             <Image
               // hard to see in dark mode, let's add some tailwind classes to fix that
               className="dark:invert dark:hue-rotate-[160deg]"

@@ -37,5 +37,5 @@ Any sensitive information such as shipping addresses or email addresses are full
 - Wagmi/Viem
 - shadcn/ui
 - The Graph Subgraph
-- Deploy to XLumio Testnet
+- Deploy to Polygon zkEVM Testnet
 - EthStorage?
